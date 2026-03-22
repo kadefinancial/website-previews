@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import PasswordGate from "./components/PasswordGate";
-
 // Auto-discover all site files in src/sites/
 const siteModules = import.meta.glob("./sites/*.jsx", { eager: true });
 
@@ -51,11 +49,7 @@ export default function App() {
           <Route
             key={site.slug}
             path={`/${site.slug}`}
-            element={
-              <PasswordGate siteName={site.slug}>
-                <site.Component />
-              </PasswordGate>
-            }
+            element={<site.Component />}
           />
         ))}
       </Routes>
