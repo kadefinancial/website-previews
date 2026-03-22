@@ -98,7 +98,7 @@ export default function KadeHoldings() {
     return (<>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Playfair Display',serif;-webkit-font-smoothing:antialiased}
       `}</style>
       <div style={{minHeight:"100vh",display:"flex",alignItems:"center",justifyContent:"center",background:"#2D2D2D"}}>
         <div style={{background:"#fff",borderRadius:16,padding:"56px 44px",textAlign:"center",maxWidth:420,width:"92%",boxShadow:"0 32px 80px rgba(0,0,0,.35)"}}>
@@ -107,9 +107,9 @@ export default function KadeHoldings() {
           </div>
           <p style={{fontSize:13,color:"#8A8A9A",letterSpacing:1,marginBottom:28,textTransform:"uppercase"}}>Website Preview</p>
           <form onSubmit={submitPw}>
-            <input type="password" value={pw} onChange={e=>{setPw(e.target.value);setPwBad(false)}} placeholder="••••" autoFocus style={{width:"100%",padding:16,fontSize:20,border:`2px solid ${pwBad?"#ef4444":"#e2e8f0"}`,borderRadius:8,textAlign:"center",letterSpacing:6,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#2D2D2D"}} />
+            <input type="password" value={pw} onChange={e=>{setPw(e.target.value);setPwBad(false)}} placeholder="••••" autoFocus style={{width:"100%",padding:16,fontSize:20,border:`2px solid ${pwBad?"#ef4444":"#e2e8f0"}`,borderRadius:8,textAlign:"center",letterSpacing:6,outline:"none",fontFamily:"'Playfair Display',serif",color:"#2D2D2D"}} />
             {pwBad && <p style={{color:"#ef4444",fontSize:12,marginTop:8,fontWeight:500}}>Incorrect password</p>}
-            <button type="submit" style={{width:"100%",padding:16,marginTop:20,fontSize:15,fontWeight:700,letterSpacing:.3,background:"#2D2D2D",color:"#fff",border:"none",borderRadius:8,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>View Site</button>
+            <button type="submit" style={{width:"100%",padding:16,marginTop:20,fontSize:15,fontWeight:700,letterSpacing:.3,background:"#2D2D2D",color:"#fff",border:"none",borderRadius:8,cursor:"pointer",fontFamily:"'Playfair Display',serif"}}>View Site</button>
           </form>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function KadeHoldings() {
       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
       :root{--primary:#2D2D2D;--accent:#D4A03C;--cream:#FAF9F6;--white:#FFFFFF;--text:#2A2A3C;--text-mid:#5A5A6E;--text-light:#8A8A9A;--border:rgba(0,0,0,0.06)}
       *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-      body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased}
+      body{font-family:'Playfair Display',serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased}
       h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:500}
       a{text-decoration:none;color:inherit}
       .gold-line{width:48px;height:2px;background:var(--accent)}
@@ -146,8 +146,8 @@ export default function KadeHoldings() {
         <span>Kade</span> <span style={{color:"var(--accent)"}}>Holdings</span>
       </div>
       <div className="desktop-only" style={{display:"flex",alignItems:"center",gap:32}}>
-        {navLinks.map(l=><button key={l.id} onClick={()=>go(l.id)} style={{background:"none",border:"none",cursor:"pointer",fontSize:14,fontWeight:600,color:scrolled?"rgba(255,255,255,0.8)":"var(--text-mid)",fontFamily:"'DM Sans',sans-serif"}}>{l.label}</button>)}
-        <a href={TEL} style={{display:"inline-flex",alignItems:"center",gap:8,background:"var(--accent)",color:"#fff",padding:"10px 24px",borderRadius:6,fontSize:14,fontWeight:700,fontFamily:"'DM Sans',sans-serif"}}>{Icons.phone} {PHONE}</a>
+        {navLinks.map(l=><button key={l.id} onClick={()=>go(l.id)} style={{background:"none",border:"none",cursor:"pointer",fontSize:14,fontWeight:600,color:scrolled?"rgba(255,255,255,0.8)":"var(--text-mid)",fontFamily:"'Playfair Display',serif"}}>{l.label}</button>)}
+        <a href={TEL} style={{display:"inline-flex",alignItems:"center",gap:8,background:"var(--accent)",color:"#fff",padding:"10px 24px",borderRadius:6,fontSize:14,fontWeight:700,fontFamily:"'Playfair Display',serif"}}>{Icons.phone} {PHONE}</a>
       </div>
       <button className="mobile-only" onClick={()=>setMenuOpen(true)} style={{background:"none",border:"none",cursor:"pointer",color:scrolled?"#fff":"var(--primary)",display:"flex"}}>{Icons.menu}</button>
     </nav>
@@ -155,8 +155,8 @@ export default function KadeHoldings() {
     {menuOpen && (
       <div style={{position:"fixed",inset:0,background:"var(--primary)",zIndex:9999,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:28}}>
         <button onClick={()=>setMenuOpen(false)} style={{position:"absolute",top:20,right:24,background:"none",border:"none",color:"#fff",cursor:"pointer"}}>{Icons.x}</button>
-        {navLinks.map(l=><button key={l.id} onClick={()=>go(l.id)} style={{background:"none",border:"none",color:"#fff",fontSize:22,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>{l.label}</button>)}
-        <a href={TEL} style={{background:"var(--accent)",color:"#fff",padding:"18px 48px",borderRadius:8,fontSize:18,fontWeight:700,fontFamily:"'DM Sans',sans-serif"}}>Call {PHONE}</a>
+        {navLinks.map(l=><button key={l.id} onClick={()=>go(l.id)} style={{background:"none",border:"none",color:"#fff",fontSize:22,fontWeight:600,cursor:"pointer",fontFamily:"'Playfair Display',serif"}}>{l.label}</button>)}
+        <a href={TEL} style={{background:"var(--accent)",color:"#fff",padding:"18px 48px",borderRadius:8,fontSize:18,fontWeight:700,fontFamily:"'Playfair Display',serif"}}>Call {PHONE}</a>
       </div>
     )}
 
@@ -185,8 +185,8 @@ export default function KadeHoldings() {
             No Repairs, No Fees. Secure Cash and a New Beginning in as Few as 7 Days.
           </p>
           <div style={{display:"flex",gap:14,flexWrap:"wrap"}}>
-            <a href={TEL} style={{display:"inline-flex",alignItems:"center",gap:10,background:"var(--accent)",color:"#fff",padding:"16px 32px",borderRadius:6,fontSize:16,fontWeight:700,boxShadow:"0 4px 20px rgba(212,160,60,0.3)",fontFamily:"'DM Sans',sans-serif"}}>{Icons.phone} Call Sam</a>
-            <button onClick={()=>go("about")} style={{display:"inline-flex",alignItems:"center",gap:8,background:"transparent",color:"var(--primary)",padding:"16px 28px",borderRadius:6,fontSize:16,fontWeight:600,border:"1.5px solid var(--border)",cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>Learn More {Icons.arrow}</button>
+            <a href={TEL} style={{display:"inline-flex",alignItems:"center",gap:10,background:"var(--accent)",color:"#fff",padding:"16px 32px",borderRadius:6,fontSize:16,fontWeight:700,boxShadow:"0 4px 20px rgba(212,160,60,0.3)",fontFamily:"'Playfair Display',serif"}}>{Icons.phone} Call Sam</a>
+            <button onClick={()=>go("about")} style={{display:"inline-flex",alignItems:"center",gap:8,background:"transparent",color:"var(--primary)",padding:"16px 28px",borderRadius:6,fontSize:16,fontWeight:600,border:"1.5px solid var(--border)",cursor:"pointer",fontFamily:"'Playfair Display',serif"}}>Learn More {Icons.arrow}</button>
           </div>
         </div>
         {/* Right — Form */}
@@ -196,15 +196,15 @@ export default function KadeHoldings() {
               <form onSubmit={e=>{e.preventDefault();setFormDone(true)}}>
                 <h3 style={{fontSize:24,color:"var(--primary)",marginBottom:6,fontFamily:"'Playfair Display',serif",textAlign:"center"}}>Get Your Fair Cash Offer</h3>
                 <p style={{fontSize:14,color:"var(--text-light)",marginBottom:24,textAlign:"center"}}>No obligation. We respond within the hour.</p>
-                <input type="text" placeholder="Property address" value={formData.address} onChange={e=>setFormData({...formData,address:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
+                <input type="text" placeholder="Property address" value={formData.address} onChange={e=>setFormData({...formData,address:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'Playfair Display',serif",background:"var(--cream)"}} />
                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
-                  <input type="text" placeholder="City" value={formData.city} onChange={e=>setFormData({...formData,city:e.target.value})} style={{padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
-                  <input type="text" placeholder="Zip code" value={formData.zip} onChange={e=>setFormData({...formData,zip:e.target.value})} style={{padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
+                  <input type="text" placeholder="City" value={formData.city} onChange={e=>setFormData({...formData,city:e.target.value})} style={{padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,outline:"none",fontFamily:"'Playfair Display',serif",background:"var(--cream)"}} />
+                  <input type="text" placeholder="Zip code" value={formData.zip} onChange={e=>setFormData({...formData,zip:e.target.value})} style={{padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,outline:"none",fontFamily:"'Playfair Display',serif",background:"var(--cream)"}} />
                 </div>
-                <input type="text" placeholder="Full name" value={formData.name} onChange={e=>setFormData({...formData,name:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
-                <input type="tel" placeholder="Phone number" value={formData.phone} onChange={e=>setFormData({...formData,phone:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
-                <input type="email" placeholder="Email" value={formData.email} onChange={e=>setFormData({...formData,email:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:16,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
-                <button type="submit" style={{width:"100%",padding:16,background:"var(--accent)",color:"#fff",border:"none",borderRadius:6,fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>Click Here For A FAIR Cash Offer</button>
+                <input type="text" placeholder="Full name" value={formData.name} onChange={e=>setFormData({...formData,name:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'Playfair Display',serif",background:"var(--cream)"}} />
+                <input type="tel" placeholder="Phone number" value={formData.phone} onChange={e=>setFormData({...formData,phone:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'Playfair Display',serif",background:"var(--cream)"}} />
+                <input type="email" placeholder="Email" value={formData.email} onChange={e=>setFormData({...formData,email:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:16,outline:"none",fontFamily:"'Playfair Display',serif",background:"var(--cream)"}} />
+                <button type="submit" style={{width:"100%",padding:16,background:"var(--accent)",color:"#fff",border:"none",borderRadius:6,fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"'Playfair Display',serif"}}>Click Here For A FAIR Cash Offer</button>
                 <p style={{fontSize:11,color:"var(--text-light)",textAlign:"center",marginTop:10,lineHeight:1.4}}>By clicking you agree to Kade Holdings Terms of Service and Privacy Policy.</p>
               </form>
             ) : (
@@ -413,11 +413,11 @@ export default function KadeHoldings() {
         <div style={{background:"var(--cream)",borderRadius:12,padding:"36px 32px",border:"1px solid var(--border)",textAlign:"left"}}>
           {!ctaFormDone ? (
             <form onSubmit={e=>{e.preventDefault();setCtaFormDone(true)}}>
-              <input type="text" placeholder="Property address" value={ctaForm.address} onChange={e=>setCtaForm({...ctaForm,address:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"#fff"}} />
-              <input type="text" placeholder="Full name" value={ctaForm.name} onChange={e=>setCtaForm({...ctaForm,name:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"#fff"}} />
-              <input type="tel" placeholder="Phone number" value={ctaForm.phone} onChange={e=>setCtaForm({...ctaForm,phone:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"#fff"}} />
-              <input type="email" placeholder="Email" value={ctaForm.email} onChange={e=>setCtaForm({...ctaForm,email:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:16,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"#fff"}} />
-              <button type="submit" style={{width:"100%",padding:16,background:"var(--accent)",color:"#fff",border:"none",borderRadius:6,fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>Get My Cash Offer</button>
+              <input type="text" placeholder="Property address" value={ctaForm.address} onChange={e=>setCtaForm({...ctaForm,address:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'Playfair Display',serif",background:"#fff"}} />
+              <input type="text" placeholder="Full name" value={ctaForm.name} onChange={e=>setCtaForm({...ctaForm,name:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'Playfair Display',serif",background:"#fff"}} />
+              <input type="tel" placeholder="Phone number" value={ctaForm.phone} onChange={e=>setCtaForm({...ctaForm,phone:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'Playfair Display',serif",background:"#fff"}} />
+              <input type="email" placeholder="Email" value={ctaForm.email} onChange={e=>setCtaForm({...ctaForm,email:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:16,outline:"none",fontFamily:"'Playfair Display',serif",background:"#fff"}} />
+              <button type="submit" style={{width:"100%",padding:16,background:"var(--accent)",color:"#fff",border:"none",borderRadius:6,fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"'Playfair Display',serif"}}>Get My Cash Offer</button>
             </form>
           ) : (
             <div style={{textAlign:"center",padding:"20px 0"}}>
@@ -478,7 +478,7 @@ export default function KadeHoldings() {
 
     {/* FLOATING MOBILE CTA */}
     <div className="mobile-only" style={{position:"fixed",bottom:0,left:0,right:0,zIndex:998,display:"flex"}}>
-      <a href={TEL} style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"center",gap:10,background:"var(--accent)",color:"#fff",padding:"18px",fontSize:17,fontWeight:700,boxShadow:"0 -4px 20px rgba(0,0,0,0.15)",fontFamily:"'DM Sans',sans-serif"}}>{Icons.phone} Call Kade Holdings</a>
+      <a href={TEL} style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"center",gap:10,background:"var(--accent)",color:"#fff",padding:"18px",fontSize:17,fontWeight:700,boxShadow:"0 -4px 20px rgba(0,0,0,0.15)",fontFamily:"'Playfair Display',serif"}}>{Icons.phone} Call Kade Holdings</a>
     </div>
     <div className="mobile-only" style={{height:60,display:"block"}} />
   </>);
