@@ -22,7 +22,7 @@ const Icons = {
   arrowRight: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>,
 };
 
-const Stars = () => <span style={{display:"inline-flex",gap:2}}>{[...Array(5)].map((_,i)=><span key={i}>{i < 4 ? Icons.star : <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4C5A9" strokeWidth="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>}</span>)}</span>;
+const Stars = () => <span style={{display:"inline-flex",gap:2}}>{[...Array(5)].map((_,i)=><span key={i}>{Icons.star}</span>)}</span>;
 
 const services = [
   { name: "Plumbing Repair & Installation", desc: "Complete residential and commercial plumbing services — from fixture installation to full system repairs handled by experienced, licensed technicians.", icon: Icons.wrench },
@@ -210,10 +210,10 @@ export default function IntertechMaintenanceGroup() {
     <section style={{padding:"72px clamp(24px,5vw,64px)",background:"var(--white)"}}>
       <div className="trust-grid" style={{maxWidth:1000,margin:"0 auto",display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:32,textAlign:"center"}}>
         {[
-          {num:"4.0",label:"Google Rating",desc:"216 reviews"},
-          {num:"216+",label:"Reviews",desc:"Real customers"},
+          {num:"216+",label:"Google Reviews",desc:"Real customers"},
           {num:String(yrs),label:"Years",desc:"Serving since 2014"},
           {num:"9+",label:"Service Types",desc:"Full-service team"},
+          {num:"24hr",label:"Response",desc:"Fast turnaround"},
         ].map((s,i)=>(
           <div key={i}>
             <div className="serif" style={{fontSize:"clamp(36px,4vw,52px)",color:"var(--primary)",lineHeight:1,marginBottom:6,letterSpacing:-1}}>{s.num}</div>
