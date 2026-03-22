@@ -329,13 +329,13 @@ export default function ArkansasRooter() {
       </div>
     </section>
 
-    {/* CTA — Layout B: Dark background (second dark section) */}
-    <section style={{padding:"100px clamp(24px,5vw,64px)",background:"var(--primary)",textAlign:"center"}}>
+    {/* CTA */}
+    <section style={{padding:"100px clamp(24px,5vw,64px)",background:"#FFFFFF",textAlign:"center",borderTop:"1px solid rgba(0,0,0,0.06)"}}>
       <div style={{maxWidth:600,margin:"0 auto"}}>
-        <h2 className="serif" style={{fontSize:"clamp(32px,4vw,50px)",color:"#fff",lineHeight:1.1,marginBottom:20,letterSpacing:-1}}>
+        <h2 className="serif" style={{fontSize:"clamp(32px,4vw,50px)",color:"#2A2A3C",lineHeight:1.1,marginBottom:20,letterSpacing:-1}}>
           Got a drain problem?<br/><span style={{fontStyle:"italic",color:"var(--accent)"}}>Call Shane.</span>
         </h2>
-        <p style={{fontSize:17,color:"rgba(255,255,255,0.6)",marginBottom:36,lineHeight:1.6}}>
+        <p style={{fontSize:17,color:"#5A5A6E",marginBottom:36,lineHeight:1.6}}>
           Free estimates over the phone. 24-hour emergency service. Over 40 years of experience.
         </p>
         <a href={TEL} style={{display:"inline-flex",alignItems:"center",gap:10,background:"var(--accent)",color:"#fff",padding:"22px 52px",borderRadius:8,fontSize:20,fontWeight:700,boxShadow:"0 6px 28px rgba(193,127,94,0.35)",fontFamily:"'DM Sans',sans-serif"}}>{Icons.phone} {PHONE}</a>
