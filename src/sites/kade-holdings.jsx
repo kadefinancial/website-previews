@@ -259,13 +259,13 @@ export default function KadeHoldings() {
           <div>
             <h3 style={{fontSize:"clamp(24px,2.5vw,32px)",color:"var(--primary)",marginBottom:24,lineHeight:1.2}}>Why Choose Kade Holdings</h3>
             <div style={{marginBottom:28}}>
-              <h4 style={{fontSize:16,fontWeight:700,color:"var(--primary)",marginBottom:8,fontFamily:"'DM Sans',sans-serif"}}>Effortless Selling Experience</h4>
+              <h4 style={{fontSize:18,fontWeight:500,color:"var(--primary)",marginBottom:8,fontFamily:"'Playfair Display',serif"}}>Effortless Selling Experience</h4>
               <p style={{fontSize:15,lineHeight:1.7,color:"var(--text-mid)"}}>
                 Say goodbye to months of waiting and the inconvenience of buyer walkthroughs. From your first call, we prioritize a seamless experience — delivering a cash offer within 24 hours and closing in just one week.
               </p>
             </div>
             <div>
-              <h4 style={{fontSize:16,fontWeight:700,color:"var(--primary)",marginBottom:8,fontFamily:"'DM Sans',sans-serif"}}>Guided Support Throughout</h4>
+              <h4 style={{fontSize:18,fontWeight:500,color:"var(--primary)",marginBottom:8,fontFamily:"'Playfair Display',serif"}}>Guided Support Throughout</h4>
               <p style={{fontSize:15,lineHeight:1.7,color:"var(--text-mid)"}}>
                 Selling a home in tough times can feel overwhelming. Our dedicated team is here to support you every step of the way. We're more than a home buyer — we're your trusted real estate ally.
               </p>
@@ -349,7 +349,7 @@ export default function KadeHoldings() {
               onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";e.currentTarget.querySelector('.cb').style.width="0"}}>
               <div className="cb" style={{position:"absolute",top:0,left:0,width:0,height:2,background:"var(--accent)",transition:"width 0.35s ease"}} />
               <div style={{color:"var(--accent)",marginBottom:18}}>{s.icon}</div>
-              <h3 style={{fontSize:18,color:"var(--primary)",marginBottom:10,fontWeight:600,fontFamily:"'DM Sans',sans-serif",lineHeight:1.3}}>{s.name}</h3>
+              <h3 style={{fontSize:20,color:"var(--primary)",marginBottom:10,fontWeight:500,fontFamily:"'Playfair Display',serif",lineHeight:1.3}}>{s.name}</h3>
               <p style={{fontSize:14,color:"var(--text-mid)",lineHeight:1.7}}>{s.desc}</p>
             </div>
           ))}
@@ -456,13 +456,13 @@ export default function KadeHoldings() {
           <a href={TEL} style={{color:"var(--accent)",fontWeight:600,fontSize:14}}>{PHONE}</a>
         </div>
         <div>
-          <h4 style={{fontSize:14,fontWeight:700,color:"#fff",textTransform:"uppercase",letterSpacing:2,marginBottom:20,fontFamily:"'DM Sans',sans-serif"}}>Quick Links</h4>
+          <h4 style={{fontSize:16,fontWeight:500,color:"#fff",marginBottom:20,fontFamily:"'Playfair Display',serif"}}>Quick Links</h4>
           <ul style={{listStyle:"none",display:"flex",flexDirection:"column",gap:10}}>
             {navLinks.map(l=><li key={l.id}><a href={`#${l.id}`} onClick={e=>{e.preventDefault();go(l.id)}} style={{fontSize:14,opacity:0.5}}>{l.label}</a></li>)}
           </ul>
         </div>
         <div>
-          <h4 style={{fontSize:14,fontWeight:700,color:"#fff",textTransform:"uppercase",letterSpacing:2,marginBottom:20,fontFamily:"'DM Sans',sans-serif"}}>Areas</h4>
+          <h4 style={{fontSize:16,fontWeight:500,color:"#fff",marginBottom:20,fontFamily:"'Playfair Display',serif"}}>Areas</h4>
           <ul style={{listStyle:"none",display:"flex",flexDirection:"column",gap:10}}>
             {areas.slice(0,6).map(a=><li key={a} style={{fontSize:14,opacity:0.5}}>{a}</li>)}
           </ul>
