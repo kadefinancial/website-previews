@@ -194,7 +194,8 @@ export default function KadeHoldings() {
           <div style={{background:"#fff",borderRadius:12,padding:"36px 32px",boxShadow:"0 4px 40px rgba(0,0,0,0.08)",border:"1px solid var(--border)"}}>
             {!formDone ? (
               <form onSubmit={e=>{e.preventDefault();setFormDone(true)}}>
-                <p style={{fontSize:14,fontWeight:700,color:"var(--text)",textTransform:"uppercase",letterSpacing:1,marginBottom:24,textAlign:"center"}}>Get Your Fair Cash Offer</p>
+                <h3 style={{fontSize:24,color:"var(--primary)",marginBottom:6,fontFamily:"'Playfair Display',serif",textAlign:"center"}}>Get Your Fair Cash Offer</h3>
+                <p style={{fontSize:14,color:"var(--text-light)",marginBottom:24,textAlign:"center"}}>No obligation. We respond within the hour.</p>
                 <input type="text" placeholder="Property address" value={formData.address} onChange={e=>setFormData({...formData,address:e.target.value})} required style={{width:"100%",padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,marginBottom:10,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
                   <input type="text" placeholder="City" value={formData.city} onChange={e=>setFormData({...formData,city:e.target.value})} style={{padding:"14px 16px",fontSize:14,border:"1.5px solid #e8e8ec",borderRadius:6,outline:"none",fontFamily:"'DM Sans',sans-serif",background:"var(--cream)"}} />
