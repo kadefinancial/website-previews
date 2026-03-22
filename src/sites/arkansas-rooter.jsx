@@ -109,7 +109,7 @@ export default function ArkansasRooter() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
         *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
       `}</style>
-      <div style={{minHeight:"100vh",display:"flex",alignItems:"center",justifyContent:"center",background:"#0F161F"}}>
+      <div style={{minHeight:"100vh",display:"flex",alignItems:"center",justifyContent:"center",background:"#4A1A2E"}}>
         <div style={{background:"#fff",borderRadius:16,padding:"56px 44px",textAlign:"center",maxWidth:420,width:"92%",boxShadow:"0 32px 80px rgba(0,0,0,.35)"}}>
           <div style={{fontFamily:"'Playfair Display',serif",fontSize:28,marginBottom:8}}>
             <span style={{fontWeight:700,color:"#4A1A2E"}}>Arkansas</span> <span style={{color:"#C17F5E"}}>Rooter</span>
@@ -129,7 +129,7 @@ export default function ArkansasRooter() {
   return (<>
     <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
-      :root{--primary:#4A1A2E;--accent:#C17F5E;--navy-deep:#0F161F;--cream:#FAF9F6;--white:#FFFFFF;--text:#2A2A3C;--text-mid:#5A5A6E;--text-light:#8A8A9A;--border:rgba(0,0,0,0.06)}
+      :root{--primary:#4A1A2E;--accent:#C17F5E;--cream:#FAF9F6;--white:#FFFFFF;--text:#2A2A3C;--text-mid:#5A5A6E;--text-light:#8A8A9A;--border:rgba(0,0,0,0.06)}
       *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
       body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased}
       h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:500}
@@ -150,7 +150,7 @@ export default function ArkansasRooter() {
     `}</style>
 
     {/* NAV */}
-    <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:1000,padding:scrolled?"14px clamp(24px,5vw,64px)":"20px clamp(24px,5vw,64px)",display:"flex",alignItems:"center",justifyContent:"space-between",background:scrolled?"rgba(15,22,31,0.97)":"transparent",backdropFilter:scrolled?"blur(12px)":"none",transition:"all 0.4s ease",boxShadow:scrolled?"0 1px 0 rgba(255,255,255,0.06)":"none"}}>
+    <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:1000,padding:scrolled?"14px clamp(24px,5vw,64px)":"20px clamp(24px,5vw,64px)",display:"flex",alignItems:"center",justifyContent:"space-between",background:scrolled?"rgba(74,26,46,0.97)":"transparent",backdropFilter:scrolled?"blur(12px)":"none",transition:"all 0.4s ease",boxShadow:scrolled?"0 1px 0 rgba(255,255,255,0.06)":"none"}}>
       <div className="serif" style={{fontSize:22,color:scrolled?"#fff":"var(--primary)",fontWeight:600,letterSpacing:-0.5}}>
         <span>Arkansas</span> <span style={{color:"var(--accent)"}}>Rooter</span>
       </div>
@@ -163,7 +163,7 @@ export default function ArkansasRooter() {
 
     {/* MOBILE MENU */}
     {menuOpen && (
-      <div style={{position:"fixed",inset:0,background:"var(--navy-deep)",zIndex:9999,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:28}}>
+      <div style={{position:"fixed",inset:0,background:"var(--primary)",zIndex:9999,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:28}}>
         <button onClick={()=>setMenuOpen(false)} style={{position:"absolute",top:20,right:24,background:"none",border:"none",color:"#fff",cursor:"pointer"}}>{Icons.x}</button>
         {navLinks.map(l=><button key={l.id} onClick={()=>go(l.id)} style={{background:"none",border:"none",color:"#fff",fontSize:22,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>{l.label}</button>)}
         <a href={TEL} style={{background:"var(--accent)",color:"#fff",padding:"18px 48px",borderRadius:8,fontSize:18,fontWeight:700,fontFamily:"'DM Sans',sans-serif"}}>Call {PHONE}</a>
@@ -264,7 +264,7 @@ export default function ArkansasRooter() {
     </section>
 
     {/* WHY US — Layout B: Single column centered */}
-    <section id="about" style={{padding:"110px clamp(24px,5vw,64px)",background:"var(--navy-deep)",color:"#fff"}}>
+    <section id="about" style={{padding:"110px clamp(24px,5vw,64px)",background:"var(--primary)",color:"#fff"}}>
       <div style={{maxWidth:700,margin:"0 auto",textAlign:"center"}}>
         <div className="gold-line" style={{margin:"0 auto 20px"}} />
         <div style={{fontSize:12,fontWeight:700,textTransform:"uppercase",letterSpacing:3,color:"var(--accent)",marginBottom:14,opacity:0.7}}>About Arkansas Rooter</div>
@@ -330,7 +330,7 @@ export default function ArkansasRooter() {
     </section>
 
     {/* CTA — Layout B: Dark background (second dark section) */}
-    <section style={{padding:"100px clamp(24px,5vw,64px)",background:"var(--navy-deep)",textAlign:"center"}}>
+    <section style={{padding:"100px clamp(24px,5vw,64px)",background:"var(--primary)",textAlign:"center"}}>
       <div style={{maxWidth:600,margin:"0 auto"}}>
         <h2 className="serif" style={{fontSize:"clamp(32px,4vw,50px)",color:"#fff",lineHeight:1.1,marginBottom:20,letterSpacing:-1}}>
           Got a drain problem?<br/><span style={{fontStyle:"italic",color:"var(--accent)"}}>Call Shane.</span>
@@ -343,7 +343,7 @@ export default function ArkansasRooter() {
     </section>
 
     {/* FOOTER */}
-    <footer style={{background:"var(--navy-deep)",color:"rgba(255,255,255,0.7)",padding:"64px clamp(24px,5vw,64px) 0",borderTop:"1px solid rgba(255,255,255,0.06)"}}>
+    <footer style={{background:"var(--primary)",color:"rgba(255,255,255,0.7)",padding:"64px clamp(24px,5vw,64px) 0",borderTop:"1px solid rgba(255,255,255,0.06)"}}>
       <div className="footer-grid" style={{maxWidth:1100,margin:"0 auto",display:"grid",gridTemplateColumns:"1.5fr 1fr 1fr",gap:48,paddingBottom:40}}>
         <div>
           <div className="serif" style={{fontSize:22,color:"#fff",marginBottom:16}}><span>Arkansas</span> <span style={{color:"var(--accent)"}}>Rooter</span></div>
