@@ -53,7 +53,9 @@ img{max-width:100%;display:block}
 /* ---- GATE ---- */
 .g-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0c1825}
 .g-card{background:#fff;border-radius:16px;padding:56px 44px;text-align:center;max-width:420px;width:92%;box-shadow:0 32px 80px rgba(0,0,0,.35)}
-.g-logo{height:44px;margin:0 auto 32px}
+.g-logo{font-size:28px;color:#1e293b;margin-bottom:32px}
+.wm-a{font-weight:700}
+.wm-p{font-weight:400;color:#94a3b8}
 .g-label{font-size:13px;color:#94a3b8;letter-spacing:.5px;margin-bottom:28px;line-height:1.5}
 .g-input{width:100%;padding:16px;font-size:20px;border:2px solid #e2e8f0;border-radius:10px;text-align:center;letter-spacing:8px;outline:none;transition:border .2s;font-family:'Inter',sans-serif;color:#1e293b}
 .g-input:focus{border-color:#1e3a5f}
@@ -65,7 +67,9 @@ img{max-width:100%;display:block}
 /* ---- NAV ---- */
 .n{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px clamp(24px,5vw,64px);transition:all .4s cubic-bezier(.4,0,.2,1)}
 .n.solid{background:rgba(255,255,255,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06);padding-top:14px;padding-bottom:14px}
-.n-logo{height:36px;transition:filter .3s}
+.n-logo{font-size:22px;color:#fff;white-space:nowrap;transition:color .3s}
+.n.solid .n-logo{color:#1e293b}
+.n.solid .n-logo .wm-p{color:#94a3b8}
 .n-right{display:flex;align-items:center;gap:36px}
 .n-link{font-size:14px;font-weight:500;color:#fff;opacity:.85;transition:opacity .2s;letter-spacing:.2px}
 .n-link:hover{opacity:1}
@@ -202,7 +206,8 @@ img{max-width:100%;display:block}
 .ft{background:#080f18;color:rgba(255,255,255,.5);padding:72px clamp(24px,5vw,64px) 0}
 .ft-inner{max-width:1200px;margin:0 auto}
 .ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:48px}
-.ft-logo{height:32px;filter:brightness(10);margin-bottom:18px}
+.ft-logo{font-size:22px;color:#fff;margin-bottom:18px}
+.ft-logo .wm-p{color:rgba(255,255,255,.4)}
 .ft-desc{font-size:14px;line-height:1.7;margin-bottom:18px}
 .ft-phone a{color:#d4a03c;font-weight:500}
 .ft h4{font-family:'Playfair Display',serif;font-size:16px;color:rgba(255,255,255,.85);margin-bottom:16px;font-weight:400}
@@ -304,7 +309,7 @@ export default function AMGPlumbing() {
       <style>{CSS}</style>
       <div className="g-wrap">
         <div className="g-card">
-          <img src={B.logo} alt="AMG Plumbing" className="g-logo" />
+          <div className="g-logo serif"><span className="wm-a">AMG</span> <span className="wm-p">Plumbing</span></div>
           <p className="g-label">Enter password to view your website preview</p>
           <form onSubmit={submitPw}>
             <input type="password" value={pw} onChange={(e) => { setPw(e.target.value); setPwBad(false); }} placeholder="••••" autoFocus className={`g-input${pwBad ? " bad" : ""}`} />
@@ -321,7 +326,7 @@ export default function AMGPlumbing() {
 
     {/* NAV */}
     <nav className={`n${solid ? " solid" : ""}`}>
-      <img src={B.logo} alt="AMG Plumbing" className="n-logo" style={solid ? {} : { filter: "brightness(10)" }} />
+      <div className="n-logo serif"><span className="wm-a">AMG</span> <span className="wm-p">Plumbing</span></div>
       <div className="n-right">
         <a href="#services" className="n-link" onClick={(e) => { e.preventDefault(); go("services"); }}>Services</a>
         <a href="#about" className="n-link" onClick={(e) => { e.preventDefault(); go("about"); }}>About</a>
@@ -549,7 +554,7 @@ export default function AMGPlumbing() {
       <div className="ft-inner">
         <div className="ft-grid">
           <div>
-            <img src={B.logo} alt="AMG Plumbing" className="ft-logo" />
+            <div className="ft-logo serif"><span className="wm-a">AMG</span> <span className="wm-p">Plumbing</span></div>
             <p className="ft-desc">
               Family-owned plumbing company serving Little Rock and Central Arkansas.
               Honest work, fair pricing, and a one-year guarantee on every job.
