@@ -180,8 +180,9 @@ export default function AMGPlumbing() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
         :root {
+          --primary: #1C2B41;
           --navy: #1C2B41;
-
+          --accent: #C8934F;
           --gold: #C8934F;
           --gold-light: #D4A76A;
           --cream: #FAF9F6;
@@ -189,7 +190,7 @@ export default function AMGPlumbing() {
           --text: #2A2A3C;
           --text-mid: #5A5A6E;
           --text-light: #8A8A9A;
-          --border: rgba(28,43,65,0.08);
+          --border: rgba(0,0,0,0.06);
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
