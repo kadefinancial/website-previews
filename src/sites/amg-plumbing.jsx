@@ -73,10 +73,10 @@ img{max-width:100%;display:block}
 .n-cta{font-size:14px;font-weight:600;color:#fff;background:#1e3a5f;padding:11px 24px;border-radius:8px;letter-spacing:.2px;transition:all .2s}
 .n-cta:hover{background:#162d4a;transform:translateY(-1px);box-shadow:0 4px 12px rgba(30,58,95,.3)}
 .n.solid .n-cta{background:#1e3a5f;color:#fff}
-.n-ham{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
-.n-ham span{display:block;width:22px;height:1.5px;background:#fff;border-radius:1px;transition:background .3s}
-.n.solid .n-ham span{background:#1e293b}
-.m-ov{position:fixed;inset:0;background:#0c1825;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.n-ham{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.n-ham i{display:block;width:22px;height:1.5px;background:#fff;border-radius:1px;transition:background .3s}
+.n.solid .n-ham i{background:#1e293b}
+.m-ov{position:fixed;inset:0;background:#0c1825;z-index:101;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px}
 .m-ov a{color:#fff;font-size:18px;font-weight:500;letter-spacing:.3px}
 .m-ov-cta{background:#1e3a5f;color:#fff;padding:16px 44px;border-radius:10px;font-weight:600;font-size:16px;margin-top:12px;letter-spacing:.3px}
 .m-x{position:absolute;top:20px;right:24px;background:none;border:none;color:rgba(255,255,255,.7);font-size:28px;cursor:pointer}
@@ -86,8 +86,8 @@ img{max-width:100%;display:block}
 .hero::before{content:'';position:absolute;top:-40%;right:-20%;width:80%;height:120%;background:radial-gradient(ellipse at center,rgba(30,58,95,.4) 0%,transparent 70%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent)}
 .h-left{display:flex;flex-direction:column;justify-content:center;padding:140px clamp(32px,6vw,80px) 100px clamp(32px,6vw,80px);position:relative;z-index:1}
-.h-tag{display:inline-flex;align-items:center;gap:8px;margin-bottom:28px}
-.h-tag span{width:32px;height:1px;background:rgba(255,255,255,.3)}
+.h-tag{display:inline-flex;align-items:center;gap:12px;margin-bottom:28px}
+.h-tag-line{width:32px;height:1px;background:rgba(255,255,255,.3);flex-shrink:0}
 .h-tag-text{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .h-h1{font-size:clamp(38px,4.8vw,68px);line-height:1.05;color:#fff;font-weight:400;margin-bottom:24px}
 .h-h1 em{font-style:italic;color:rgba(255,255,255,.5)}
@@ -165,14 +165,15 @@ img{max-width:100%;display:block}
 
 /* ---- REVIEWS ---- */
 .rev-sec{background:#fff}
-.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1200px;margin:0 auto}
 .rv{background:#fafbfc;border:1px solid #f1f5f9;border-radius:12px;padding:36px 32px;display:flex;flex-direction:column;transition:all .3s}
 .rv:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.06)}
+.rv.mhide{display:none}
 .rv-stars{color:#d4a03c;font-size:12px;letter-spacing:2px;margin-bottom:16px}
 .rv-text{font-size:14px;line-height:1.8;color:#475569;flex:1;margin-bottom:20px}
 .rv-author{font-size:13px;font-weight:600;color:#1e293b}
 .rv-src{font-size:11px;color:#94a3b8;margin-top:2px}
-.rv-dots{display:flex;justify-content:center;gap:8px;margin-top:32px}
+.rv-dots{display:none;justify-content:center;gap:8px;margin-top:32px}
 .rv-dot{width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;transition:all .2s}
 .rv-dot.on{background:#1e3a5f;transform:scale(1.2)}
 .rv-dot.off{background:#e2e8f0}
@@ -230,6 +231,7 @@ img{max-width:100%;display:block}
   .why-inner{grid-template-columns:1fr;gap:40px}
   .rev-grid{grid-template-columns:1fr}
   .rev-grid .rv.mhide{display:none}
+  .rv-dots{display:flex}
   .ft{padding:48px 20px 0}
   .ft-grid{grid-template-columns:1fr;gap:32px}
   .ft-btm{padding-bottom:68px}
@@ -326,7 +328,7 @@ export default function AMGPlumbing() {
         <a href="#reviews" className="n-link" onClick={(e) => { e.preventDefault(); go("reviews"); }}>Reviews</a>
         <a href="#areas" className="n-link" onClick={(e) => { e.preventDefault(); go("areas"); }}>Areas</a>
         <a href={B.tel} className="n-cta">{B.phone}</a>
-        <button className="n-ham" onClick={() => setMenu(true)} aria-label="Menu"><span /><span /><span /></button>
+        <button className="n-ham" onClick={() => setMenu(true)} aria-label="Menu"><i /><i /><i /></button>
       </div>
     </nav>
 
@@ -345,7 +347,7 @@ export default function AMGPlumbing() {
     <section className="hero">
       <div className="h-left">
         <div className="h-tag">
-          <span /><span className="h-tag-text">Family Owned &middot; Est. 2023</span>
+          <span className="h-tag-line" /><span className="h-tag-text">Family Owned &middot; Est. 2023</span>
         </div>
         <h1 className="h-h1">Trusted Plumbing<br />in Little Rock, <em>AR</em></h1>
         <p className="h-sub">
