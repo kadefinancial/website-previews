@@ -1,3 +1,4 @@
+// Layout: A | Industry: Plumber | City: Little Rock
 import { useState, useEffect, useRef } from "react";
 
 // --- SVG Icon Components (no emojis) ---
@@ -66,11 +67,11 @@ const services = [
 ];
 
 const reviews = [
-  { text: "Seth and his team are second to none. They are incredibly knowledgeable and fair about the work they perform. They took the time to explain the repair process and how our plumbing system works.", name: "Barbara D.", src: "Google" },
-  { text: "Lewis and his colleague did a superb job. On time, very professional. I appreciate the way they are constantly training their colleagues and teaching as they do the work.", name: "Satisfied Customer", src: "Google" },
-  { text: "AMG was there the very next day and fixed it right up. Jonathan had to climb on the roof to clear the vent and didn't hesitate. He triple-checked to make sure the problem was fully resolved.", name: "Happy Homeowner", src: "Google" },
-  { text: "Grayson and his boss were very friendly, efficient and professional. They came on time and answered all my questions. I highly recommend AMG Plumbing.", name: "Verified Review", src: "Google" },
-  { text: "The service guys listened to all my issues with all three toilets and worked on each one to make sure they worked perfectly before they left. Everyone was friendly and professional.", name: "Local Customer", src: "Google" },
+  { text: "Seth and his team are second to none. They are incredibly knowledgeable and fair about the work they perform. They took the time to explain the repair process and how our plumbing system works.", name: "Steven Garrett", src: "Google" },
+  { text: "Lewis and his colleague did a superb job. On time, very professional. Both times we have had AMG to the house, they assessed and took care of the issues quickly. I appreciate the way they are constantly training their colleagues and teaching as they do the work.", name: "A Blair", src: "Google" },
+  { text: "My kitchen sink stopped draining the other night after using the garbage disposal, and AMG was there the very next day and fixed it right up. Jonathan had to climb on the roof to clear the vent and didn't hesitate. He triple-checked to make sure the problem was fully resolved before leaving.", name: "Christie Ison", src: "Google" },
+  { text: "Grayson and his boss were very friendly, efficient and professional. They came on time and answered all my questions regarding washer and dryer installation. I highly recommend AMG Plumbing.", name: "Doug Menz", src: "Google" },
+  { text: "I was very pleased with the service I received from AMG plumbing. They were great about informing me about what time they would be arriving and were even able to show up a little early. The service guys listened to all my issues with all three toilets and worked on each one to make sure they worked perfectly before they left.", name: "Barbara DuPriest", src: "Google" },
 ];
 
 const areas = ["Little Rock", "North Little Rock", "Maumelle", "Sherwood", "Jacksonville", "Cabot", "Benton", "Bryant", "Conway"];
@@ -156,7 +157,7 @@ export default function AMGPlumbing() {
           *{margin:0;padding:0;box-sizing:border-box}
           body{font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
         `}</style>
-        <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", background:"#0F161F" }}>
+        <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", background:"#1C2B41" }}>
           <div style={{ background:"#fff", borderRadius:16, padding:"56px 44px", textAlign:"center", maxWidth:420, width:"92%", boxShadow:"0 32px 80px rgba(0,0,0,.35)" }}>
             <div style={{ fontFamily:"'Playfair Display',serif", fontSize:28, color:"#1C2B41", marginBottom:32 }}>
               <span style={{ fontWeight:700 }}>AMG</span> <span style={{ color:"#C8934F" }}>Plumbing</span>
@@ -180,7 +181,7 @@ export default function AMGPlumbing() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
         :root {
           --navy: #1C2B41;
-          --navy-deep: #0F161F;
+
           --gold: #C8934F;
           --gold-light: #D4A76A;
           --cream: #FAF9F6;
@@ -213,7 +214,7 @@ export default function AMGPlumbing() {
       `}</style>
 
       {/* NAV */}
-      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:1000, padding:scrolled ? "14px clamp(24px,5vw,64px)" : "20px clamp(24px,5vw,64px)", display:"flex", alignItems:"center", justifyContent:"space-between", background: scrolled ? "rgba(15,22,31,0.97)" : "transparent", backdropFilter: scrolled ? "blur(12px)" : "none", transition:"all 0.4s ease", boxShadow: scrolled ? "0 1px 0 rgba(255,255,255,0.06)" : "none" }}>
+      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:1000, padding:scrolled ? "14px clamp(24px,5vw,64px)" : "20px clamp(24px,5vw,64px)", display:"flex", alignItems:"center", justifyContent:"space-between", background: scrolled ? "rgba(28,43,65,0.97)" : "transparent", backdropFilter: scrolled ? "blur(12px)" : "none", transition:"all 0.4s ease", boxShadow: scrolled ? "0 1px 0 rgba(255,255,255,0.06)" : "none" }}>
         <div className="serif" style={{ fontSize:22, color: scrolled ? "#fff" : "var(--navy)", fontWeight:600, letterSpacing:-0.5 }}>
           <span>AMG</span><span style={{ color:"var(--gold)", marginLeft:6 }}>Plumbing</span>
         </div>
@@ -230,7 +231,7 @@ export default function AMGPlumbing() {
 
       {/* MOBILE MENU */}
       {mobileMenu && (
-        <div style={{ position:"fixed", inset:0, background:"var(--navy-deep)", zIndex:9999, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:28 }}>
+        <div style={{ position:"fixed", inset:0, background:"var(--primary)", zIndex:9999, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:28 }}>
           <button onClick={() => setMobileMenu(false)} style={{ position:"absolute", top:20, right:24, background:"none", border:"none", color:"#fff", cursor:"pointer" }}>{Icons.x}</button>
           {navLinks.map(l => (
             <button key={l.id} onClick={() => scrollTo(l.id)} style={{ background:"none", border:"none", color:"#fff", fontSize:22, fontWeight:600, cursor:"pointer", fontFamily:"'DM Sans',sans-serif" }}>{l.label}</button>
@@ -255,7 +256,7 @@ export default function AMGPlumbing() {
             </p>
             <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:36 }}>
               <Stars />
-              <span style={{ fontSize:14, color:"var(--text-light)", fontStyle:"italic", marginLeft:4 }}>"Second to none" — Barbara D.</span>
+              <span style={{ fontSize:14, color:"var(--text-light)", fontStyle:"italic", marginLeft:4 }}>"Second to none" — Steven Garrett</span>
             </div>
             <div style={{ display:"flex", gap:14, flexWrap:"wrap" }}>
               <a href={PHONE_TEL} style={{ display:"inline-flex", alignItems:"center", gap:10, background:"var(--gold)", color:"#fff", padding:"18px 36px", borderRadius:6, fontSize:16, fontWeight:700, boxShadow:"0 4px 20px rgba(200,147,79,0.3)", fontFamily:"'DM Sans',sans-serif" }}>
@@ -337,7 +338,7 @@ export default function AMGPlumbing() {
       </section>
 
       {/* WHY US */}
-      <section id="about" style={{ padding:"110px clamp(24px,5vw,64px)", background:"var(--navy-deep)", color:"#fff", position:"relative", overflow:"hidden" }}>
+      <section id="about" style={{ padding:"110px clamp(24px,5vw,64px)", background:"var(--primary)", color:"#fff", position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", top:0, right:0, width:"40%", height:"100%", background:"linear-gradient(135deg, rgba(200,147,79,0.04) 0%, transparent 60%)", pointerEvents:"none" }} />
         <div className="why-grid" style={{ maxWidth:1100, margin:"0 auto", display:"grid", gridTemplateColumns:"1.1fr 0.9fr", gap:80, alignItems:"start", position:"relative" }}>
           <div>
@@ -438,7 +439,7 @@ export default function AMGPlumbing() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background:"var(--navy-deep)", color:"rgba(255,255,255,0.7)", padding:"64px clamp(24px,5vw,64px) 0" }}>
+      <footer style={{ background:"var(--primary)", color:"rgba(255,255,255,0.7)", padding:"64px clamp(24px,5vw,64px) 0" }}>
         <div className="footer-grid" style={{ maxWidth:1100, margin:"0 auto", display:"grid", gridTemplateColumns:"1.5fr 1fr 1fr", gap:48, paddingBottom:40 }}>
           <div>
             <div className="serif" style={{ fontSize:22, color:"#fff", marginBottom:16 }}>AMG <span style={{ color:"var(--gold)" }}>Plumbing</span></div>
