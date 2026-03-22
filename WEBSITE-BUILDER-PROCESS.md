@@ -199,6 +199,8 @@ This alternating pattern creates the premium feel. Never deviate.
 
 **The --primary color is used as a full background ONLY for: the dark section(s), the footer, the nav on scroll, the mobile menu overlay, and the password gate. It should NEVER be used as a background for light sections like Services, Trust Bar, or Service Areas. The --accent color should NEVER be used as a full section background — only for buttons, icons, and small highlights.**
 
+**CRITICAL RULE: No two adjacent sections can share the same background color.** If the CTA section is directly above the Footer, the CTA MUST be white or cream — never --primary. The Footer is always --primary, so the section above it must always contrast. This prevents the "dark blob" problem where two sections melt together.
+
 ### The Gold Line
 
 Every section heading starts with a 48px wide, 2px tall horizontal line in the --accent color, centered above the eyebrow text. This is our agency signature element. It appears on: Services, Why Us, Reviews, Service Areas. It does NOT appear on: Hero, Trust Bar, CTA, Footer.
@@ -399,12 +401,10 @@ Four stats, each with:
 6. **Reviews** — --white, 3 review cards side by side in a row (1 col mobile), NO carousel, all visible at once
    - Each card: --cream background, quote mark, stars, text, name
 7. **Service Areas** — --cream, centered flex-wrap pills
-8. **CTA** — --primary (SECOND dark section in this layout — the exception)
-   - White text, accent-colored button, centered
-   - This layout has TWO dark sections (Why Us + CTA) because the centered hero needs a strong close
-9. **Footer** — --primary (flows from CTA seamlessly with a subtle 1px border separator)
+8. **CTA** — --white with top border, centered, accent button (NEVER dark — must contrast against footer below)
+9. **Footer** — --primary (the only dark section at the bottom)
 
-**Section backgrounds:** cream → white → cream → --primary → white → cream → --primary → --primary
+**Section backgrounds:** cream → white → cream → --primary → white → cream → white → --primary
 
 ---
 
@@ -503,8 +503,8 @@ Four stats, each with:
 | Services | 3-col grid | 2-col grid (large) | Alternating rows (zigzag) | Masonry staggered |
 | Why Us | 2-col (text + badges) | Single col centered | Light bg + pull quote | Giant number bg, centered |
 | Reviews | Carousel with dots | 3 cards side by side | Single large feature | Horizontal scroll strip |
-| Dark sections | 1 (Why Us) | 2 (Why Us + CTA) | 1 (Hero) | 1 (Why Us) |
-| CTA bg | White | Dark | White | White |
+| Dark sections | 1 (Why Us) | 1 (Why Us) | 1 (Hero) | 1 (Why Us) |
+| CTA bg | White | White | White | White |
 | Vibe | Professional | Editorial | Bold/modern | Boutique/unique |
 
 ---
@@ -596,6 +596,7 @@ Before outputting, verify every item. Fix failures before delivering.
 - [ ] ZERO emojis anywhere — all icons are inline SVGs
 - [ ] Hero headline has one italic phrase in --accent color (the "design moment")
 - [ ] Nav scrolls to --primary (matching the dark sections and footer)
+- [ ] **No two adjacent sections share the same background color — especially CTA and Footer**
 - [ ] **FIRST LINE of JSX file is the layout comment: `// Layout: [A/B/C/D] | Industry: [type] | City: [city]`**
 - [ ] Layout chosen follows rotation rules (checked last 4 files in src/sites/)
 
