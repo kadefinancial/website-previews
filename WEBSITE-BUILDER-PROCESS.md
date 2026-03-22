@@ -306,7 +306,16 @@ Four stats, each with:
 - Large number in Playfair Display, --primary color
 - Label: 12px uppercase, letter-spacing 2px, DM Sans weight 700
 - Description: 13px, --text-light
-- Stat 1: Google rating | Stat 2: Review count | Stat 3: Guarantee or years | Stat 4: Best differentiator
+
+**RATING DISPLAY RULES — READ CAREFULLY:**
+
+- **4.5+ stars:** Show rating prominently as a stat (e.g., "4.9" with label "Google Rating"). Use this as Stat 1.
+  - Stat 1: Google rating | Stat 2: Review count | Stat 3: Guarantee or years | Stat 4: Best differentiator
+- **4.0–4.4 stars:** DO NOT show the overall rating number anywhere on the site. Replace it with the review COUNT as the lead stat. 216 reviews is impressive. 4.0 stars is not. Lead with strength.
+  - Stat 1: Review count (e.g., "216+") | Stat 2: Years in business | Stat 3: Guarantee or certification | Stat 4: Best differentiator
+- **Below 4.0:** This lead should not have been sent to Claude Code. Flag it and skip the build.
+
+**HERO REVIEW QUOTE RULE:** The review displayed in the hero section must ALWAYS show 5 filled stars — because you are displaying ONE specific 5-star review, not the overall business rating. Even if the business is 4.0 overall, the individual review you're quoting IS a 5-star review. Always pick the strongest 5-star review for the hero quote and show 5 stars next to it.
 
 ### Services (all layouts — grid style varies)
 
@@ -323,9 +332,11 @@ Four stats, each with:
 ### Reviews (all layouts — display style varies)
 
 - Real reviews from the brief with REAL NAMES only
-- Star rating (5 SVG stars in --accent or gold)
+- Each individual review shows 5 filled SVG stars (all reviews in the brief ARE 5-star reviews — display them as such)
 - Review text in quotes, italic
 - Reviewer name (bold, --primary) and source
+- If the overall business rating is 4.5+, the section heading can say "[Rating] Stars on Google"
+- If the overall business rating is 4.0-4.4, the section heading should say "What Our Customers Say" — do NOT mention the overall rating number
 - Subtle CTA after: "Ready to experience the difference? Call [phone]"
 
 ### Service Areas (all layouts)
@@ -605,7 +616,9 @@ Before outputting, verify every item. Fix failures before delivering.
 - [ ] All phone numbers are tel: links
 - [ ] Form has exactly 3 fields: name, phone, service dropdown
 - [ ] Form dropdown has actual services from brief
-- [ ] Star rating + review quote visible in hero above the fold
+- [ ] Star rating + review quote visible in hero above the fold — MUST show 5 filled stars (it's a 5-star individual review, not the overall rating)
+- [ ] If business is 4.0-4.4 overall: rating number is NOT displayed anywhere — review count shown instead
+- [ ] If business is 4.5+: rating displayed prominently in trust bar and reviews heading
 - [ ] Subtle CTA text after services and reviews
 - [ ] Floating mobile CTA bar present, --accent background, mobile only
 
