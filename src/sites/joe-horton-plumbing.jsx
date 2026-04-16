@@ -56,7 +56,7 @@ export default function JoeHortonPlumbing() {
   const [formDone, setFormDone] = useState(false);
   const [formData, setFormData] = useState({name:"",phone:"",service:""});
 
-  const submitPw = (e) => { e.preventDefault(); if(pw==="2026"){sessionStorage.setItem("jhp-auth","1");setAuthed(true)}else{setPwBad(true);setPw("")} };
+  const submitPw = (e) => { e.preventDefault(); if(pw==="roof"){sessionStorage.setItem("jhp-auth","1");setAuthed(true)}else{setPwBad(true);setPw("")} };
   useEffect(() => { if(!authed) return; const fn=()=>setScrolled(window.scrollY>60); window.addEventListener("scroll",fn); return()=>window.removeEventListener("scroll",fn); }, [authed]);
 
   useEffect(() => {

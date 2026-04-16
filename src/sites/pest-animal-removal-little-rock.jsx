@@ -115,7 +115,7 @@ export default function PestAnimalRemovalLittleRock() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("par-lr-auth", "1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("par-lr-auth", "1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 

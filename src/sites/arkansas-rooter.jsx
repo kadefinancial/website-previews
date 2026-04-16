@@ -63,7 +63,7 @@ export default function ArkansasRooter() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("ar-rooter-auth","1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("ar-rooter-auth","1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 

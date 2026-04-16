@@ -56,7 +56,7 @@ export default function EmergencyPlumbing() {
   const [revIdx, setRevIdx] = useState(0);
   const revTimer = useRef(null);
 
-  const submitPw = (e) => { e.preventDefault(); if(pw==="2026"){sessionStorage.setItem("ep-auth","1");setAuthed(true)}else{setPwBad(true);setPw("")} };
+  const submitPw = (e) => { e.preventDefault(); if(pw==="roof"){sessionStorage.setItem("ep-auth","1");setAuthed(true)}else{setPwBad(true);setPw("")} };
   useEffect(() => { if(!authed) return; const fn=()=>setScrolled(window.scrollY>60); window.addEventListener("scroll",fn); return()=>window.removeEventListener("scroll",fn); }, [authed]);
   useEffect(() => { if(!authed) return; revTimer.current=setInterval(()=>setRevIdx(i=>(i+1)%reviews.length),6000); return()=>clearInterval(revTimer.current); }, [authed]);
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const CORRECT_PASSWORD = "2026";
+const CORRECT_PASSWORD = "roof";
 
 export default function PasswordGate({ siteName, children }) {
   const storageKey = `preview-auth-${siteName}`;

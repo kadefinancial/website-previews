@@ -60,7 +60,7 @@ export default function KadeHoldings() {
   const [videoPlaying, setVideoPlaying] = useState(false);
   const testTimer = useRef(null);
 
-  const submitPw = (e) => { e.preventDefault(); if(pw==="2026"){sessionStorage.setItem("kade-auth","1");setAuthed(true)}else{setPwBad(true);setPw("")} };
+  const submitPw = (e) => { e.preventDefault(); if(pw==="roof"){sessionStorage.setItem("kade-auth","1");setAuthed(true)}else{setPwBad(true);setPw("")} };
 
   useEffect(() => { if(!authed) return; const fn=()=>setScrolled(window.scrollY>60); window.addEventListener("scroll",fn); return()=>window.removeEventListener("scroll",fn); }, [authed]);
 

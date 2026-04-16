@@ -34,7 +34,7 @@ const Icons = {
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
   ),
   star: (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="#C8934F" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="#8B3A3A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
   ),
   mapPin: (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -107,7 +107,7 @@ export default function GFHeatAndAir() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("gf-heat-air-auth", "1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("gf-heat-air-auth", "1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 
@@ -175,7 +175,7 @@ export default function GFHeatAndAir() {
         <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", background:"#1C2B41" }}>
           <div style={{ background:"#fff", borderRadius:16, padding:"56px 44px", textAlign:"center", maxWidth:420, width:"92%", boxShadow:"0 32px 80px rgba(0,0,0,.35)" }}>
             <div style={{ fontFamily:"'Playfair Display',serif", fontSize:28, fontWeight:600, letterSpacing:-0.5, marginBottom:4 }}>
-              <span style={{ color:"#1C2B41" }}>GF</span> <span style={{ color:"#C8934F" }}>Heat & Air</span>
+              <span style={{ color:"#1C2B41" }}>GF</span> <span style={{ color:"#8B3A3A" }}>Heat & Air</span>
             </div>
             <p style={{ fontSize:13, color:"#8A8A9A", letterSpacing:1, marginBottom:28, lineHeight:1.5, textTransform:"uppercase" }}>Website Preview</p>
             <form onSubmit={submitPw}>
@@ -196,7 +196,7 @@ export default function GFHeatAndAir() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
         :root {
           --primary: #1C2B41;
-          --accent: #C8934F;
+          --accent: #8B3A3A;
           --cream: #FAF9F6;
           --white: #FFFFFF;
           --text: #2A2A3C;
@@ -279,7 +279,7 @@ export default function GFHeatAndAir() {
               <span style={{ fontSize:14, color:"rgba(255,255,255,0.7)", fontStyle:"italic" }}>"Owner responds to every single Google review with detailed, personalized responses."</span>
             </div>
             <div style={{ display:"flex", gap:16, flexWrap:"wrap" }}>
-              <a href={PHONE_TEL} style={{ display:"inline-flex", alignItems:"center", gap:10, background:"var(--accent)", color:"#fff", padding:"18px 36px", borderRadius:6, fontSize:16, fontWeight:700, letterSpacing:0.3, fontFamily:"'DM Sans',sans-serif", boxShadow:"0 4px 20px rgba(200,147,79,0.3)", transition:"transform 0.2s" }}>
+              <a href={PHONE_TEL} style={{ display:"inline-flex", alignItems:"center", gap:10, background:"var(--accent)", color:"#fff", padding:"18px 36px", borderRadius:6, fontSize:16, fontWeight:700, letterSpacing:0.3, fontFamily:"'DM Sans',sans-serif", boxShadow:"0 4px 20px rgba(139,58,58,0.3)", transition:"transform 0.2s" }}>
                 {Icons.phone} Call Now
               </a>
               <button onClick={() => scrollTo("services")} style={{ display:"inline-flex", alignItems:"center", gap:8, background:"transparent", border:"1.5px solid rgba(255,255,255,0.3)", color:"#fff", padding:"18px 32px", borderRadius:6, fontSize:16, fontWeight:700, letterSpacing:0.3, fontFamily:"'DM Sans',sans-serif", cursor:"pointer" }}>
@@ -481,7 +481,7 @@ export default function GFHeatAndAir() {
           <p style={{ fontSize:17, lineHeight:1.7, color:"var(--text-mid)", marginBottom:36, maxWidth:520, margin:"0 auto 36px" }}>
             Certified technicians. Bilingual service. Honest pricing. Open Saturdays for your convenience.
           </p>
-          <a href={PHONE_TEL} style={{ display:"inline-flex", alignItems:"center", gap:10, background:"var(--accent)", color:"#fff", padding:"18px 42px", borderRadius:6, fontSize:18, fontWeight:700, letterSpacing:0.3, fontFamily:"'DM Sans',sans-serif", boxShadow:"0 4px 20px rgba(200,147,79,0.3)", transition:"transform 0.2s" }}>
+          <a href={PHONE_TEL} style={{ display:"inline-flex", alignItems:"center", gap:10, background:"var(--accent)", color:"#fff", padding:"18px 42px", borderRadius:6, fontSize:18, fontWeight:700, letterSpacing:0.3, fontFamily:"'DM Sans',sans-serif", boxShadow:"0 4px 20px rgba(139,58,58,0.3)", transition:"transform 0.2s" }}>
             {Icons.phone} {PHONE}
           </a>
         </div>

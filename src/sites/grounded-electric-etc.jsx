@@ -120,7 +120,7 @@ export default function GroundedElectricEtc() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("ge-auth", "1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("ge-auth", "1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 

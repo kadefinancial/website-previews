@@ -67,7 +67,7 @@ export default function AngeloRoofingLLC() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("angelo-auth", "1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("angelo-auth", "1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 

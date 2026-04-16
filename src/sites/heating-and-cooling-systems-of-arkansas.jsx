@@ -94,7 +94,7 @@ export default function HeatingAndCoolingSystemsOfArkansas() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("hcsa-auth", "1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("hcsa-auth", "1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 

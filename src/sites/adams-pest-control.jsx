@@ -101,7 +101,7 @@ export default function AdamsPestControl() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("adams-pest-auth", "1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("adams-pest-auth", "1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 

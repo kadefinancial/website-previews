@@ -89,7 +89,7 @@ export default function AMGPlumbing() {
 
   const submitPw = (e) => {
     e.preventDefault();
-    if (pw === "2026") { sessionStorage.setItem("amg-auth", "1"); setAuthed(true); }
+    if (pw === "roof") { sessionStorage.setItem("amg-auth", "1"); setAuthed(true); }
     else { setPwBad(true); setPw(""); }
   };
 
